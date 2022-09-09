@@ -1,13 +1,12 @@
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBarcomp from './components/NavBarcomp';
+import Navbar from './components/Navbar';
 
-function App() {
+const App = () => {
   return (
-    <div className='App'>
-      <NavBarcomp/>
-    </div>
+    <>
+      <Navbar />
+    </>
   );
-}
+};
 
 export default App;
