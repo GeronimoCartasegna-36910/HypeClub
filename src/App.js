@@ -1,13 +1,17 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
-import Productos from './container/Productos';
+import ItemListContainer from './container/ItemListContainer';
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Productos/>
-    </>
+      <Routes>
+          <Route path='/' element={<ItemListContainer/>} />
+          <Route path='/category/:idCategory' element={<ItemListContainer/>}/>
+      </Routes>
+    </BrowserRouter>  
   );
 };
 

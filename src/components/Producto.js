@@ -1,6 +1,6 @@
 const Producto = ({nombre,precio, talle, img}) =>{
     return(
-        <div className="container__card container">
+        <div className="container">
             <div className="container__img">
                <img class="img_item" src={img} alt=""/>
             </div>
