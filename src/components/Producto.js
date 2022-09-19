@@ -1,4 +1,6 @@
-const Producto = ({nombre,precio, talle, img}) =>{
+import { Link } from "react-router-dom"
+
+const Producto = ({id,nombre,precio, talle, img}) =>{
     return(
         <div className="container">
             <div className="container__img">
@@ -8,7 +10,7 @@ const Producto = ({nombre,precio, talle, img}) =>{
                 <h3 className="container__info--title">{nombre}</h3>
                 <p className="container__info--size">Talle:{talle}</p>
                 <p className="container__info--price">${precio}</p>
-                <button className="button__info">Ver Más</button>
+                <button className="button__info"><Link to={`/item/${id}`}>Ver Más</Link></button>
             </div>
         </div>
     )
